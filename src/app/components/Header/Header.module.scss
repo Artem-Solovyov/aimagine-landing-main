@@ -1,0 +1,47 @@
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/variables';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9998;
+
+  .logoIcon {
+    position: relative;
+    z-index: 999;
+  }
+
+  .hamburgerIcon {
+    cursor: pointer;
+    direction: rtl;
+
+    span {
+      display: block;
+      height: 3px;
+      background-color: $white;
+      width: 65px;
+      transition: width .3s ease;
+
+      &:nth-of-type(2) {
+        width: 43px;
+        margin: 6px 0;
+      }
+    }
+
+    &:hover {
+      span:nth-of-type(2) {
+        width: 65px;
+      }
+    }
+  }
+
+  @include sm {
+    padding: 20px 20px;
+  }
+}

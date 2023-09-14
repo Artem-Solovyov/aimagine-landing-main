@@ -1,0 +1,45 @@
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/variables';
+
+.checkbox_label {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox_input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox_custom {
+  position: relative;
+  height: 14px;
+  width: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-right: 10px;
+}
+
+.checkbox_input:checked+.checkbox_custom {
+  background-color: #FECE00;
+  border-color: #FECE00;
+}
+
+.checkbox_custom:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox_input:checked+.checkbox_custom:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  width: 3px;
+  height: 8px;
+  border: 1.5px solid #363636;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}

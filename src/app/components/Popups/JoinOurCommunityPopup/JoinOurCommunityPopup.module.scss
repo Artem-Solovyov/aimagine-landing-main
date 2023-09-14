@@ -1,0 +1,35 @@
+@import '../../../assets/scss/mixins';
+@import '../../../assets/scss/variables';
+
+.joinOurCommunityPopup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 36px;
+  margin-bottom: 36px;
+
+  a {
+
+    &:not(:last-of-type) {
+      margin-right: 32px;
+    }
+
+    svg {
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+
+      &:hover {
+        path {
+          fill: $yellow;
+        }
+      }
+
+
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+}

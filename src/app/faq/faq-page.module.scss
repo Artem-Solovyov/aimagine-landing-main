@@ -1,0 +1,259 @@
+@import '../assets/scss/mixins';
+@import '../assets/scss/variables';
+
+.page {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-image: url('../assets/images/faq-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .faq {
+    position: relative;
+    z-index: 999;
+    padding: 118px 10px;
+    display: grid;
+    grid-template-columns: 267px 1fr;
+
+
+    .questions {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-row-gap: 2px;
+      max-height: calc(100vh - 220px);
+      overflow: auto;
+
+      >div {
+        display: flex;
+        align-items: center;
+        background: rgba(39, 39, 39, 0.75);
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: $white;
+        padding: 19px 8px;
+        cursor: pointer;
+        height: 83px;
+
+        @include lg {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .answers {
+      background: rgba(39, 39, 39, 0.75);
+      backdrop-filter: blur(40px);
+      max-height: calc(100vh - 220px);
+      overflow: auto;
+
+      .answer_header {
+        display: flex;
+        align-items: center;
+        padding: 16px 24px;
+
+
+        .user_icon {
+          width: 42px;
+          height: 42px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 50%;
+        }
+
+        >span {
+          margin-left: 16px;
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 140%;
+          color: $white;
+        }
+      }
+
+      .answers_body {
+        margin-top: 15px;
+        display: flex;
+        background: $dark;
+        padding: 16px 24px;
+
+        .link {
+          display: flex;
+          align-items: center;
+          margin-top: 16px;
+          margin-left: 16px;
+
+          a {
+            &:not(:last-of-type) {
+              margin-right: 32px;
+            }
+
+            svg {
+              width: 32px;
+              height: 32px;
+
+              &:hover {
+                path {
+                  fill: $yellow;
+                }
+              }
+
+              path {
+                fill: $white;
+              }
+            }
+          }
+        }
+
+        button {
+          margin-top: 16px;
+          margin-left: 16px;
+        }
+
+        .description {
+          margin-left: 16px;
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 140%;
+          color: $white;
+
+          >p {
+            >span {
+              color: $yellow;
+              text-decoration: underline;
+              cursor: pointer;
+            }
+
+            >a {
+              color: $yellow;
+            }
+
+            &:not(:first-child) {
+              margin-top: 16px;
+            }
+          }
+
+          &.answer1 {
+            @include typed("AImagine is the first AI NFT marketplace to launch on Arbitrum.\A\A Turn whatever you imagine into art that lives forever, onchain.\A Use our integrated no-code AI tools to create your art and launch your NFT collection. \A\A There's a LOT more, like the first Artist Staking pools in the world to empower community curation of art on our NFT Marketplace.",
+              2.5,
+              (iterations: 0, caret-width: 3px,
+                caret-space: 10px, caret-color: $yellow));
+          }
+
+          &.answer2 {
+            @include typed("Have you ever imagined how rich you’d be if you got paid for being an early Drake fan?\A\A In web3, we are all tastemakers. Your opinion matters and we have created a beautiful system to leverage this called Artist Staking pools.\A\A Through them, YOU control which artists launch on AImagine, making it the first truly community curated art marketplace.\A\A In return? The platform and the artists reward you for your social capital for the first time ever.",
+              2.5,
+              (iterations: 0, caret-width: 3px,
+                caret-space: 10px, caret-color: $yellow));
+          }
+
+          &.answer3 {
+            @include typed("Before the internet, no one got their voice heard but the privileged few.\A\A With web2, this changed and we all got a voice on social media—but at a cost. We gave value and personal information to platforms like Facebook which was captured in their stock, without a penny coming to us, the users.\A\A In web3, this is changing. Since you control who gets big on AImagine, you should get bigger with them.\A\A We are simply greasing this wheel by capitalizing it in a novel way. Hence you go from passively following to curating, and actively getting rewarded for your social capital.\A\A On AImagine, you don’t just follow artists, you decide which artists launch, earn a stake in the AIMG artist rewards and enjoy an unparalleled NFT trading experience.",
+              2.5,
+              (iterations: 0, caret-width: 3px,
+                caret-space: 10px, caret-color: $yellow));
+          }
+
+          &.answer4 {
+            @include typed("With AImagine, NFT aficionados, art collectors and enthusiasts alike will experience a unique way to collect and trade.\A\A First of all, through Artist Staking Pools, you control which artist launches next on AImagine.\A\A Then, in addition to regular trading and auctions, we are integrating a revolutionary, Bid 2 Earn mechanism, where even if your bid doesn’t win, you still earn. Imagine !",
+              2.5,
+              (iterations: 0, caret-width: 3px,
+                caret-space: 10px, caret-color: $yellow));
+          }
+
+          &.answer5 {
+            @include typed("Aimagine brings a unique GBM auction mechanism to Arbitrum where bidders make money even when they are outbid, introducing the concept of Bid-to-Earn for both primary drops and secondary sales. \A\A More Activity \A Bidders are rewarded for bidding early, making the start of every auction an event no one wants to miss. \A\A Better Prices \A The incentives lead to greater price discovery, meaning items sell for their true market value, even if the demand is low. \A\A Fairer Drops \A Bots lose their advantage as GBM eliminates the emphasis on speed, creating a fairer system where everybody can win. \A\A Everybody wins with AImagine !",
+              2.5,
+              (iterations: 0, caret-width: 3px,
+                caret-space: 10px, caret-color: $yellow));
+          }
+
+          &.answer6 {
+            @include typed("$AIMG is the utility token powering the web3 creator economy on AImagine. \A\A AImagine’s Artist Staking pools act as a capitalized voting structure controlling the success of artists on the platform, democratizing art as a market and putting the wisdom of crowds to work to unearth the next generation of the best AI artists worldwide.",
+              2.5,
+              (iterations: 0, caret-width: 3px,
+                caret-space: 10px, caret-color: $yellow));
+          }
+
+          &.answer7 {
+            @include typed("Aimagine’s native token AIMG incentivises user adoption, engagement and loyalty, whilst curating and simultaneously stimulating Artists’ production. \A\A The primary utility of the AIMG token is as a vote-stake instrument, where token-holders curate the platform and choose which Artist should directly receive a share of platform rewards by staking AIMG to specific Artist pools. \A\A The AIMG token is designed as a form of Social Capital. Algorithmic incentives and rewards are paid to the staking pools in AIMG for the benefit of Artists, whereas Artists can reward their stakers with up to 100% share of token rewards and various in-kind benefits as they wish. \A\A In the AImagine model, staking acts as a global economic control function.  It performs two key functions: \A\A           -    Set the amount of recycled αIMG for Burning before Distribution \A\A           -    Send excess αIMG to the User Rewards Treasury \A\A Secondary token utilities include transaction payments on the platform and loyalty rewards in a form of discount on fees.",
+              2.5,
+              (iterations: 0, caret-width: 3px,
+                caret-space: 10px, caret-color: $yellow));
+          }
+
+          &.answer8 {
+            @include typed("$AIMG is a utility token alone, and is used to democratize AI Art. \A You can find out more about the tokenomics",
+              2.5,
+              (iterations: 0, caret-width: 3px,
+                caret-space: 10px, caret-color: $yellow));
+          }
+
+          &.answer9 {
+            @include typed("We will share more details about this soon, but for now make sure to  join the AImagine community to stay in the loop and join our waitlist",
+              2.5,
+              (iterations: 0, caret-width: 3px,
+                caret-space: 10px, caret-color: $yellow));
+          }
+
+          &.answer10 {
+            @include typed("AImagine finds an actual use case for blockchain within the network, by running all auctions as smart contracts as well as the Next Artist to Launch voting happening on-chain via staking of $AIMG. \A\A This democratizes art on the platform and puts it beyond tampering by any one.  \A\A  AImagine is the first AI NFT marketplace to launch on Arbitrum.",
+              2.5,
+              (iterations: 0, caret-width: 3px,
+                caret-space: 10px, caret-color: $yellow));
+          }
+
+          &.answer11 {
+            @include typed("ARB is only a letter away from ART ;) \A\A Just kidding! A major part of the NFT ecosystem still remains on Ethereum, but projects are shifting towards more cost-efficient chains, and we believe this shift will get stronger with time. \A\A We all remember hyped mints when you had to pay 7 ETH in gas, or paying a couple ETH to add whitelisted wallets to the smart contract. \A\A We believe that high gas costs are an entry barrier for young artists and a new generation of buyers in the NFT space. \A\A At the same time we are building a very  sophisticated decentralized platform and curation mechanism that we want to keep cost-effective and smooth for the community. \A\A Having all this in mind we have decided to build on Arbitrum.",
+              2.5,
+              (iterations: 0, caret-width: 3px,
+                caret-space: 10px, caret-color: $yellow));
+          }
+
+          &.answer12 {
+            @include typed("Making art with AImagine is as easy as imagining it. We will offer a suite of no code AI tools to not only create your art but also to create a portfolio, launch your artist campaign and earn the support of the community. \A\A The aim is for artists to be able to build a continued relationship with the audience through our platform. More details on this as we get closer to platform launch. \A\A For now, please join our Artist waitlist.",
+              2.5,
+              (iterations: 0, caret-width: 3px,
+                caret-space: 10px, caret-color: $yellow));
+          }
+
+          &.answer13 {
+            @include typed("All are welcome! \A\A We already have a waitlist, please join it whether you are an enthusiast or collector or artist. We will have tons of rewarding tasks and fun activities to band together the community we need to revolutionize art with AI. \A\A Join our community on Twitter and Discord and stay in the loop for our waitlist campaign. \A\A We will also have a token raise soon, and of course, early community members stand a chance to take part. More on this in time.😇",
+              2.5,
+              (iterations: 0, caret-width: 3px,
+                caret-space: 10px, caret-color: $yellow));
+          }
+        }
+      }
+    }
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  .faq_mobile {
+    display: none;
+
+    @include sm {
+      display: block;
+    }
+  }
+
+  @include lg {
+    background-image: url('../assets/images/faq-tablet-bg.png');
+  }
+
+  @include sm {
+    background-image: url('../assets/images/faq-mobile-bg.png');
+  }
+}

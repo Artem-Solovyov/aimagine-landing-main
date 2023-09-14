@@ -1,0 +1,162 @@
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/variables';
+
+.ultimateArtPlatformPage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('../../assets/images/faq-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0px 20px;
+
+  .title {
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: $yellow;
+
+    @include lg {
+      font-size: 64px;
+    }
+
+    @include sm {
+      font-size: 30px;
+    }
+  }
+
+  .description {
+    pointer-events: none;
+    @include typed("Aimagine is the first AI Art NFT marketplace on Arbitrum",
+      "Make NFT Art with integrated no code AI tools",
+      "Monetize your social capital",
+      "Unique art auctions : Earn even when you lose bids",
+      1.5,
+      (caret-width: 3px,
+        caret-space: 10px, caret-color: $yellow));
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: $white;
+    margin-top: 8px;
+    margin-bottom: 32px;
+
+    @include lg {
+      font-size: 18px;
+    }
+
+    @include sm {
+      font-size: 16px;
+      max-width: 234px;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 24px;
+    margin-bottom: 32px;
+
+    >div {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 12px 24px 12px 8px;
+      display: flex;
+      align-items: center;
+
+      h2 {
+        font-family: 'Bebas Neue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 100%;
+        letter-spacing: -0.04em;
+        color: $white;
+
+        @include lg {
+          text-align: center;
+          font-size: 24px;
+        }
+
+        @include sm {
+          text-align: left;
+          font-size: 20px;
+        }
+      }
+
+      h3 {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 140%;
+        color: $white;
+
+        @include lg {
+          font-size: 18px;
+          text-align: center;
+        }
+
+        @include sm {
+          font-size: 16px;
+          text-align: left;
+        }
+      }
+
+      @include lg {
+        padding: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        >div {
+          width: 100%;
+
+          @include sm {
+            width: auto;
+          }
+        }
+
+      }
+
+      @include sm {
+        padding: 8px 20px;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+      }
+    }
+
+    @include sm {
+      grid-template-columns: 1fr;
+      grid-gap: 2px;
+    }
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: 116px 116px;
+    grid-gap: 24px;
+    justify-content: center;
+
+    @include sm {
+      grid-template-columns: auto;
+      grid-gap: 8px;
+    }
+  }
+
+  @include lg {
+    background-image: url('../../assets/images/faq-tablet-bg.png');
+  }
+
+  @include sm {
+    background-image: url('../../assets/images/faq-mobile-bg.png');
+  }
+}

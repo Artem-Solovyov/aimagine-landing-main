@@ -1,0 +1,116 @@
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/variables';
+
+.sidebar {
+  transition: .3s ease;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background: rgba(54, 54, 54, 0.75);
+  backdrop-filter: blur(15px);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  width: 474px;
+
+  &.show {
+    opacity: 1;
+    right: 0;
+  }
+
+  &.hide {
+    opacity: 0;
+    right: -474px;
+
+    @include lg {
+      right: -100%;
+    }
+  }
+
+  .closeIcon {
+    cursor: pointer;
+    position: absolute;
+    right: 60px;
+    top: 20px;
+
+    &:hover {
+      svg {
+        path {
+          fill: $yellow;
+        }
+      }
+    }
+
+    @include sm {
+      right: 20px;
+
+      svg {
+        width: 33px;
+      }
+    }
+  }
+
+  .menu {
+    margin-top: 60px;
+    list-style: none;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      font-family: 'Bebas Neue';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 36px;
+      text-align: center;
+      letter-spacing: -0.04em;
+      color: $white;
+      text-transform: uppercase;
+      min-height: 76px;
+      cursor: pointer;
+
+      &:hover {
+        color: $yellow;
+      }
+
+      a {
+        &:not(:last-of-type) {
+          margin-right: 32px;
+        }
+
+        svg {
+          width: 32px;
+          height: 32px;
+
+          &:hover {
+            path {
+              fill: $yellow;
+            }
+          }
+
+
+          path {
+            fill: $white;
+          }
+        }
+
+      }
+
+
+      @include lg {
+        font-size: 24px;
+      }
+
+      @include sm {
+        font-size: 20px;
+      }
+    }
+
+  }
+
+  @include lg {
+    width: 100%;
+  }
+}

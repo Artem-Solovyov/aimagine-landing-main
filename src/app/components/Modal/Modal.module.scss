@@ -1,0 +1,84 @@
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/variables';
+
+.modalContainer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  background: rgba(54, 54, 54, 0.75);
+
+  &.show {
+    display: flex;
+  }
+
+  &.hide {
+    display: none;
+  }
+
+  .modal {
+    width: 640px;
+    padding: 17px 23px;
+    background: rgba(39, 39, 39, 0.75);
+    backdrop-filter: blur(40px);
+
+    .modalHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      >h1.title {
+        font-family: 'Bebas Neue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 100%;
+        letter-spacing: -0.04em;
+        color: $white;
+
+        @include sm {
+          font-size: 24px;
+        }
+      }
+
+      .close_icon {
+        cursor: pointer;
+
+        &:hover {
+          svg {
+            path {
+              fill: $yellow;
+            }
+          }
+        }
+
+        @include lg {
+          svg {
+            width: 33px;
+          }
+        }
+      }
+    }
+
+    .modalBody {
+      margin-top: 16px;
+
+      >p {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: $white;
+      }
+    }
+
+    @include lg {
+      width: 90%;
+    }
+  }
+}

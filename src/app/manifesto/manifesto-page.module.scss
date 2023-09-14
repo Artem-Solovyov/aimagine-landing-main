@@ -1,0 +1,256 @@
+@import '../assets/scss/mixins';
+@import '../assets/scss/variables';
+
+.page {
+  position: relative;
+  z-index: 1;
+
+  .topCircle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+  }
+
+  .bottomCircle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+
+  .manifesto {
+    padding: 162px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    >h1 {
+      text-align: center;
+      font-family: 'Bebas Neue';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 80px;
+      line-height: 100%;
+      letter-spacing: -0.04em;
+      color: $white;
+
+      >span {
+        color: $yellow;
+      }
+
+      @include lg {
+        font-size: 64px;
+      }
+
+      @include sm {
+        font-size: 30px;
+      }
+    }
+
+    >h2 {
+      font-family: 'Syne';
+      font-style: normal;
+      font-weight: 800;
+      font-size: 29px;
+      line-height: 36px;
+      text-align: center;
+      color: $white;
+      margin-top: 64px;
+
+      >span {
+        color: $yellow;
+      }
+
+      @include lg {
+        font-size: 25px;
+      }
+
+      @include sm {
+        font-size: 14px;
+        margin-top: 32px;
+      }
+    }
+
+    .firstSection {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      margin-top: 64px;
+
+      >h3 {
+        font-family: 'Bebas Neue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 100%;
+        letter-spacing: -0.04em;
+        color: $white;
+
+        @include lg {
+          font-size: 24px;
+        }
+
+        @include sm {
+          font-size: 20px;
+        }
+      }
+
+      >div {
+        margin-top: 24px;
+        max-width: 600px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: $white;
+
+        >p:not(:first-of-type) {
+          margin-top: 24px;
+        }
+
+        @include lg {
+          font-size: 14px;
+        }
+      }
+
+      @include sm {
+        margin-top: 38px;
+      }
+    }
+
+    .secondSection {
+      margin-top: 64px;
+
+      >h3 {
+        font-family: 'Bebas Neue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 100%;
+        text-align: center;
+        letter-spacing: -0.04em;
+        color: $white;
+        margin-bottom: 24px;
+
+        @include sm {
+          font-size: 20px;
+          margin-bottom: 16px;
+        }
+      }
+
+      .faq {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 140%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .question {
+          color: $white;
+        }
+
+        .answer {
+          color: $yellow;
+          margin-bottom: 30px;
+        }
+
+        @include lg {
+          font-size: 18px;
+        }
+
+        @include sm {
+          font-size: 16px;
+        }
+      }
+
+      .desc {
+        max-width: 600px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: $white;
+
+        @include lg {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .thirdSection {
+      margin-top: 64px;
+
+      >h3 {
+        font-family: 'Bebas Neue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 80px;
+        line-height: 100%;
+        text-align: center;
+        letter-spacing: -0.04em;
+        color: $white;
+
+        @include lg {
+          font-size: 64px;
+        }
+
+        @include lg {
+          font-size: 30px;
+        }
+      }
+
+      >p {
+        font-family: 'Bebas Neue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 100%;
+        text-align: center;
+        letter-spacing: -0.04em;
+        color: $white;
+        margin-top: 16px;
+        margin-bottom: 24px;
+
+        span {
+          color: $yellow;
+        }
+
+        @include lg {
+          font-size: 24px;
+        }
+
+        @include lg {
+          font-size: 20px;
+        }
+      }
+
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 24px;
+
+        @include sm {
+          grid-template-columns: 1fr;
+          grid-gap: 8px;
+        }
+      }
+    }
+
+    @include lg {
+      padding: 94px 10px;
+    }
+
+    @include sm {
+      padding: 72px 10px;
+    }
+  }
+}
